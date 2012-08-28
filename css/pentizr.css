@@ -1,0 +1,131 @@
+/*
+ *
+ * pentizr.js 
+ * 
+ * Show your CodePens everywhere in 25 seconds!
+ * 
+ * 
+ * Tim Pietrusky
+ * http://timpietrusky.com
+ *
+ */
+ 
+.pentizr * {
+    box-sizing:border-box;
+}
+ 
+.pentizr .wrappetizr {
+    position:relative;
+    float:left;
+    height:200px;
+    width:200px;
+    margin-left:10px;
+}
+
+.pentizr .wrappetizr:first-child {
+    margin-left:0;
+}
+
+.pentizr .wrappetizr .subcontainer {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    transition: all .3s ease-in;
+}
+
+.pentizr .wrappetizr iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    height:0;
+    height:200px;
+    width:200px;
+    transition:all .3s ease-in;
+}
+
+/*
+ * Meta
+ */
+.pentizr .wrappetizr .meta {
+    position:absolute;
+    z-index:20;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100px;
+    
+    color:#fff;
+    padding:10px;
+    background:rgba(0, 0, 0, .7);
+    transition:all .3s ease-in;
+    
+    animation: meta-showdown-1 .45s 1 ease-in;
+}
+
+.pentizr .wrappetizr .meta .open-codepen {
+    opacity:0;
+    visibility:hidden;
+    transition:all .3s ease-in;
+}
+
+.pentizr .wrappetizr .meta .switch-mode {
+    position:absolute;
+    right:0;
+    top:0;
+    opacity:0;
+    transition:all .3s ease-in;
+}
+
+/*
+ * Click style 'onair'
+ */
+.pentizr .wrappetizr.onair .subcontainer,
+.pentizr .wrappetizr.onair iframe {
+    left:50%;
+    top:50%;
+    z-index:22;
+    transform:scale(1.2) translate(0, 150px);
+    
+    /* Height & width */
+    height:400px;
+    width:600px;
+    margin:-200px 0 0 -300px;
+}
+
+.pentizr .wrappetizr.onair .meta {
+    z-index:200;
+    animation: meta-showdown-2 .45s 1 ease-in;
+}
+
+.pentizr .wrappetizr.onair .meta .open-codepen {
+    opacity:1;
+    visibility: visible;
+}
+
+
+.pentizr .wrappetizr.onair .meta .switch-mode {
+    opacity:1;
+}
+
+@keyframes meta-showdown-1 {
+   0%, 50% {
+      opacity:0;
+   }
+    
+   100% {
+     opacity:1;
+   }
+}
+
+@keyframes meta-showdown-2 {
+   0%, 50% {
+      opacity:0;
+   }
+    
+   100% {
+     opacity:1;
+   }
+}
+
