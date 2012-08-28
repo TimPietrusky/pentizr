@@ -19,10 +19,12 @@ Add [jQuery](http://leaverou.github.com/prefixfree/)
 ### Step 2: pentizr
 
 Add **pentizr.css**
-        <link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr.css">
+
+    <link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr.css">
         
 Add **pentizr.js**
-        <script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
+
+    <script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
         
 ### Step 3: GO GO GO!
 
