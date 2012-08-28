@@ -4,6 +4,10 @@
 
 2012 by http://timpietrusky.com
 
+# Live example
+
+[About Tim Pietrusky](http://timpietrusky.koding.com/dateme)
+
 ## How to
 
 ### Step 1: Default stuff
