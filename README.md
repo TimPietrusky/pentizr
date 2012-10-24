@@ -14,21 +14,29 @@
 
 Add [-prefix-free](http://leaverou.github.com/prefixfree/) by [Lea Verou](http://lea.verou.me/) 
 
-    <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+```html
+<script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+```
 
 Add [jQuery](http://leaverou.github.com/prefixfree/) 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+```html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+```
     
 ### Step 2: pentizr
 
 Add **pentizr.css**
 
-    <link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr.css">
+```html
+<link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr.css">
+```
         
 Add **pentizr.js**
 
-    <script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
+```html
+<script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
+```
         
 ### Step 3: GO GO GO!
 
