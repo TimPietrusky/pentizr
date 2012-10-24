@@ -19,7 +19,8 @@
         type : 'owned',
         page : 1,
         classname : 'pentizr',
-        social : false
+        social : false,
+        limit : 9
       };
 
   // Create the defaults once
@@ -59,6 +60,12 @@
         container = $('<div class="'+this.options.classname+'"></div>');
     
     $.each(pens, function(i, v) {
+      if (i >= _this.options.limit) {
+        return false;
+      }
+
+      console.log(i);
+
       var wrapper = $('<div class="wrappetizr"></div>');
         
       // Subcontainer     
