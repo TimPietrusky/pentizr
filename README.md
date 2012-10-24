@@ -52,7 +52,7 @@ $(function() {
 <div class="my-pens"></div>
 ```
 
-#### Get 3 loved pens of user "HugoGiraudel"
+#### Get last 3 loved pens of user "HugoGiraudel"
 
 ```javascript
 $(function() {
@@ -60,6 +60,7 @@ $(function() {
             $('.my-pens').pentizr(
                 {
                     username : 'HugoGiraudel',
+                    type : 'loved',
                     limit : 3
                 }
             );
