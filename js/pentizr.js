@@ -64,8 +64,6 @@
         return false;
       }
 
-      console.log(i);
-
       var wrapper = $('<div class="wrappetizr"></div>');
         
       // Subcontainer     
