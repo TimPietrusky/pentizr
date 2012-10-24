@@ -32,9 +32,26 @@ Add **pentizr.js**
         
 ### Step 3: GO GO GO!
 
+#### Get owned pens of user "TimPietrusky"
     <script type="text/javascript">
         $(function() {
             $('.my-pens').pentizr({username: 'TimPietrusky'});
+        });
+    </script>
+    
+    <body>
+        <div class="my-pens"></div>
+    </body>
+
+#### Get 3 loved pens of user "HugoGiraudel"
+    <script type="text/javascript">
+        $(function() {
+            $('.my-pens').pentizr(
+                {
+                    username : 'HugoGiraudel',
+                    limit : 3
+                }
+            );
         });
     </script>
     
