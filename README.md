@@ -33,18 +33,21 @@ Add **pentizr.js**
 ### Step 3: GO GO GO!
 
 #### Get owned pens of user "TimPietrusky"
-    <script type="text/javascript">
-        $(function() {
-            $('.my-pens').pentizr({username: 'TimPietrusky'});
-        });
-    </script>
-    
-    <body>
-        <div class="my-pens"></div>
-    </body>
+
+```javascript
+$(function() {
+  $('.my-pens').pentizr({username: 'TimPietrusky'});
+});
+```
+
+```html  
+<div class="my-pens"></div>
+```
 
 #### Get 3 loved pens of user "HugoGiraudel"
-    <script type="text/javascript">
+
+```javascript
+$(function() {
         $(function() {
             $('.my-pens').pentizr(
                 {
@@ -53,8 +56,9 @@ Add **pentizr.js**
                 }
             );
         });
-    </script>
-    
-    <body>
-        <div class="my-pens"></div>
-    </body>
+});
+```
+
+```html  
+<div class="my-pens"></div>
+```
