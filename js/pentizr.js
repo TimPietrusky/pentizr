@@ -20,7 +20,8 @@
         page : 1,
         classname : 'pentizr',
         social : false,
-        limit : 9
+        limit : 9,
+        template : ''
       };
 
   // Create the defaults once
@@ -48,18 +49,31 @@
       url: 'http://codepen-awesomepi.timpietrusky.com/' + this.options.username + '/' + this.options.type + '/' + this.options.page,
       success: function(data) {
         if (data.content != null) {
-          _this.show(data.content.pens);
+
+          // Use the default template
+          if (_this.options.template == '') {
+            _this.show(data.content.pens);
+
+          // Use a custom template
+          } else {
+            _this.showCustom(data.content.pens);
+          }
         }
       }
     });
     
   };
   
+  /**
+   * Appends the output to the element. 
+   */
   Plugin.prototype.show = function(pens) {
     var _this = this
         container = $('<div class="'+this.options.classname+'"></div>');
     
     $.each(pens, function(i, v) {
+
+      // Limit the returned pens
       if (i >= _this.options.limit) {
         return false;
       }
@@ -136,7 +150,57 @@
       });
     });
   }
-  
+
+  /**
+   * Use a custom <CODE>options.template</CODE> and parse
+   * the values:
+   *
+   * {{title}}
+   * {{description}}
+   * {{views}}
+   * {{hearts}}
+   * {{comments}}
+   * {{urlDetails}}
+   * {{urlPen}}
+   * {{urlFull}}
+   *
+   * The output is appended to the element.
+   */
+  Plugin.prototype.showCustom = function(pens) {
+    var _this = this;
+    
+    $.each(pens, function(i, v) {
+
+      // Limit the returned pens
+      if (i >= _this.options.limit) {
+        return false;
+      }
+
+      var template = _this.options.template,
+          customRegex = '',
+          toReplace = {
+            title : this.title,
+            description : this.description,
+            views : this.views,
+            hearts : this.hearts,
+            comments : this.comments,
+            urlDetails : this.url.details,
+            urlPen : this.url.pen,
+            urlFull : this.url.full
+          }
+      ;
+
+      // Parse the template and replace the toReplace fields
+      $.each(toReplace, function(i, v) {
+        customRegex = new RegExp("{{" + i + "}}", "g");
+        template = template.replace(customRegex, v);
+      });
+
+      // Append the template to element
+      $(_this.element).append(template);
+    });
+  }
+
   // A really lightweight plugin wrapper around the constructor,
   // preventing against multiple instantiations
   $.fn[pluginName] = function( options ) {

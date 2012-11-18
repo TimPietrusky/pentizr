@@ -19,19 +19,41 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
         <!-- pentizr JS -->
-        <script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
+        <script src="js/pentizr-min.js"></script>
         
         <script type="text/javascript">
         /* 
          * Example
          */
         $(function() {
-        	$('.my-pens').pentizr({username: 'TimPietrusky'});
+            // Default template
+        	// $('.my-pens').pentizr({username: 'TimPietrusky', type : 'loved', limit : 5});
+
+            // Custom template
+            $('.my-pens-custom').pentizr({
+                username: 'TimPietrusky', 
+                type : 'owned', 
+                limit : 5,
+                template : ''+
+                '<div class="entry">'+
+                    '<div class="entry-body">'+
+                        '<h2 class="label" id="{{title}}" data-label="♥ {{hearts}}">{{title}}</h2>'+
+                        '<p>{{description}}</p>'+
+                        '<b>Source & Preview</b>'+
+                        '<p><a href="{{urlPen}}" target="_blank">{{urlPen}}</a></p>'+
+                        '<b>Details & Comments</b>'+
+                        '<p><a href="{{urlDetails}}" target="_blank">{{urlPen}}</a></p>'+
+                    '<div>'+
+                '</div>'
+            });
+
         });
         </script>
         
     </head>
     <body>
  		<div class="my-pens"></div>
+        <br>
+        <div class="my-pens-custom"></div>
     </body>
 </html>
