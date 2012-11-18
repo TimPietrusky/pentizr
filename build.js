@@ -6,7 +6,7 @@ var fs = require('fs'),
 
 var folder = '.',
     stuff = [];
-
+ 
 function getFiles(folder) {
     var files = fs.readdirSync(folder);    
     folder += '/';
