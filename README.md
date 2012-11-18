@@ -1,6 +1,6 @@
 # pentizr.js
 
-[CodePen](http://codepen.io) on your website in less than 25 seconds.
+[CodePen](http://codepen.io) on your website in less than 25 seconds. **pentizr** uses the [unofficial CodePen API](https://github.com/TimPietrusky/codepen-awesomepi) to fetch the data and creates some nice output for you. 
 
 2012 by http://timpietrusky.com
 
@@ -29,13 +29,13 @@ Add [jQuery](http://leaverou.github.com/prefixfree/)
 Add **pentizr.css**
 
 ```html
-<link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr.css">
+<link rel="stylesheet" href="https://raw.github.com/TimPietrusky/pentizr/master/css/pentizr-min.css">
 ```
         
 Add **pentizr.js**
 
 ```html
-<script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr.js"></script>
+<script src="https://raw.github.com/TimPietrusky/pentizr/master/js/pentizr-min.js"></script>
 ```
         
 ### Step 3: GO GO GO!
