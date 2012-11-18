@@ -1,6 +1,8 @@
 # pentizr.js
 
-[CodePen](http://codepen.io) on your website in less than 25 seconds. **pentizr** uses the [unofficial CodePen API](https://github.com/TimPietrusky/codepen-awesomepi) to fetch the data and creates some nice output for you. 
+[CodePen](http://codepen.io) on your website in less than 25 seconds. 
+
+**pentizr** uses the [unofficial CodePen API](https://github.com/TimPietrusky/codepen-awesomepi) to fetch the data and creates some nice output for you. 
 
 2012 by http://timpietrusky.com
 
