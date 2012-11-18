@@ -1,10 +1,10 @@
 /*
  *
- * pentizr.js 
- * 
+ * pentizr.js
+ *
  * Show your CodePens everywhere in 25 seconds!
- * 
- * 
+ *
+ *
  * Tim Pietrusky
  * http://timpietrusky.com
  *
@@ -39,12 +39,12 @@
   Plugin.prototype.init = function() {
     this.retrieve();
   };
-  
+
   Plugin.prototype.retrieve = function() {
     var _this = this;
-    
+
     $.ajax({
-      dataType: 'jsonp', 
+      dataType: 'jsonp',
       jsonp: 'jsonp',
       url: 'http://codepen-awesomepi.timpietrusky.com/' + this.options.username + '/' + this.options.type + '/' + this.options.page,
       success: function(data) {
@@ -61,7 +61,7 @@
         }
       }
     });
-    
+
   };
   
   /**
@@ -70,7 +70,7 @@
   Plugin.prototype.show = function(pens) {
     var _this = this
         container = $('<div class="'+this.options.classname+'"></div>');
-    
+
     $.each(pens, function(i, v) {
 
       // Limit the returned pens
@@ -79,10 +79,10 @@
       }
 
       var wrapper = $('<div class="wrappetizr"></div>');
-        
-      // Subcontainer     
+
+      // Subcontainer
       var subcontainer = $('<div class="subcontainer"></a>');
-      
+
       // Iframe
       var iframe = $('<iframe></iframe>');
       iframe.attr('frameborder', 0);
@@ -90,32 +90,32 @@
       iframe.attr('allowtransparency', 0);
       iframe.attr('class', 'iframe' + i);
       iframe.attr('src', this.url.fullgrid);
-      
+
       // Meta
       var meta = $('<div class="meta"></div>'),
           meta_title = $('<h2></h2>');
-      
+
       if (this.title != null) {
         meta_title.html(this.title);
       }
-      
+
       meta_title.appendTo(meta);
-      
+
 //      // Live/static switch
 //      meta_switch_mode = $('<div class="switch-mode"><a href="#" data-full="'+this.url.full+'" data-fullgrid="'+this.url.fullgrid+'">Live</a></div>');
 //      meta_switch_mode.appendTo(meta);
-//      
+//
 //      meta_switch_mode.find('a').click(function(e) {
 //        iframe.attr('src', $(this).data('full'));
 //      });
-      
+
       // Open CodePen
       meta_codepen = $('<div class="open-codepen"></div>');
       meta_codepen.append($('<a href="'+this.url.details+'" target="_blank">Details</a>'));
       meta_codepen.append($('<a href="'+this.url.pen+'" target="_blank">Source</a>'));
       meta_codepen.append($('<a href="'+this.url.full+'" target="_blank">Fullscreen</a>'));
       meta_codepen.appendTo(meta);
-      
+
       // Create social if options.social is true
       if (_this.options.social) {
         var meta_social = $('<div class="social"></div>');
@@ -124,21 +124,21 @@
         meta_social.append(this.hearts + ' <span class="hearts">&#9829;</span>');
         meta_social.append('&nbsp;&nbsp;');
         meta_social.append(this.comments + ' <span class="comments">&#9829;</span>');
-        
+
         meta_social.appendTo(meta);
       }
-      
+
       // Append childs
       wrapper.append(iframe);
       wrapper.append(subcontainer);
       subcontainer.append(meta);
       wrapper.appendTo(container);
-      
+
       // Append pen to element
       $(_this.element).append(container);
-      
+
       // Add click handler for the pens
-      subcontainer.click(function(e) {
+      subcontainer.on('click', function(e) {
         if (e.target.localName != 'a') {
           if (wrapper.hasClass('onair')) {
             wrapper.removeClass('onair');
