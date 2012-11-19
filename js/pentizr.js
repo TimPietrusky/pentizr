@@ -21,7 +21,8 @@
         classname : 'pentizr',
         social : false,
         limit : 9,
-        template : ''
+        template : '',
+        callback : ''
       };
 
   // Create the defaults once
@@ -149,6 +150,11 @@
         }
       });
     });
+
+    // Provide a function when everything is finished
+    if ($.isFunction(_this.options.callback)) {
+      _this.options.callback();
+    }
   }
 
   /**
@@ -199,6 +205,11 @@
       // Append the template to element
       $(_this.element).append(template);
     });
+
+    // Provide a function when everything is finished
+    if ($.isFunction(_this.options.callback)) {
+      _this.options.callback();
+    }
   }
 
   // A really lightweight plugin wrapper around the constructor,
