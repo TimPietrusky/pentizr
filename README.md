@@ -16,7 +16,7 @@ But just see for yourself... A **pentizr** custom template in action:
 
 [**timpietrusky.com**/lab](http://timpietrusky.com/lab)
 
-## How to
+# How to
 
 ### Step 1: Default stuff
 
