@@ -104,14 +104,12 @@ $(function() {
 
 ```javascript
 $(function() {
-        $(function() {
-            $('.my-pens').pentizr(
-                {
-                    username : 'HugoGiraudel',
-                    type : 'loved',
-                    limit : 3
-                }
-            );
-        });
+  $(function() {
+    $('.my-pens').pentizr({
+      username : 'HugoGiraudel',
+      type : 'loved',
+      limit : 3
+    });
+  });
 });
 ```
