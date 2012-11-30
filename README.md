@@ -68,7 +68,7 @@ $(function() {
     limit: 6
   });
 });
-
+```
 
 #### Create a custome template and get your owned pens of user "TimPietrusky"
 
