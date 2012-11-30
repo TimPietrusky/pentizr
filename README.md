@@ -8,7 +8,7 @@ But just see for yourself... A **pentizr** custom template in action:
 
 # Live examples
 
-## Dreamdealer
+## Johan van Tongeren aka "Dreamdealer"
 
 [**dreamdealer.nl**/#codepens](http://www.dreamdealer.nl/#codepens)
 
@@ -57,6 +57,18 @@ $(function() {
   $('.my-pens').pentizr({username: 'Mobilpadde'});
 });
 ```
+
+#### Get 6 owned pens of user "Dreamdealer" (aka Johan van Tongeren)
+
+```javascript
+$(function() {
+  $('.my-pens').pentizr({
+    username: 'Dreamdealer',
+    type: 'owned',
+    limit: 6
+  });
+});
+
 
 #### Create a custome template and get your owned pens of user "TimPietrusky"
 
