@@ -4,7 +4,7 @@ A simple jQuery plugin which uses the unofficial [CodePen](http://codepen.io) AP
 
 **pentizr** uses the [unofficial CodePen API](https://github.com/TimPietrusky/codepen-awesomepi) to fetch the data and creates some nice output for you. 
 
-## If you like this, please hit me @TimPietrusky so that I can add your site to the live examples!
+**If you like this, please hit me @TimPietrusky so that I can add your site to the live examples!**
 
 But just see for yourself... A **pentizr** custom template in action:
 
