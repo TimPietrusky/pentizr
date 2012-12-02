@@ -14,6 +14,10 @@ But just see for yourself... A **pentizr** custom template in action:
 
 [**dreamdealer.nl**/#codepens](http://www.dreamdealer.nl/#codepens)
 
+## Patrick Cox
+
+[**patrick-cox.com**](http://patrick-cox.com)
+
 ## Tim Pietrusky
 
 [**timpietrusky.com**/lab](http://timpietrusky.com/lab)
