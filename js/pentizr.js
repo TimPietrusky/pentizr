@@ -192,7 +192,9 @@
             comments : this.comments,
             urlDetails : this.url.details,
             urlPen : this.url.pen,
-            urlFull : this.url.full
+            urlFull : this.url.full,
+            urlLargeImage : this.url.largeimg,
+            urlSmallImage : this.url.smallimg
           }
       ;
 
